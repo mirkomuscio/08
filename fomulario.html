@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <header>
+        <div><img src="assets/img/Peugeot_Logo.svg.png"  alt="" height="120px"></div>
+        
+        <nav>
+           <div class="navegacion">
+            <ul>
+                <li><a href="">INICIO</a></li>
+                <li><a href="">PILOTOS</a></li>
+                <li><a href="">COPA DE ORO</a></li>
+                <li><a href="">RESULTADOS</a></li>
+            </ul>
+           </div>
+           <div>
+            <ul>
+                <li><a href="">INICIO</a></li>
+                <li><a href="">PILOTOS</a></li>
+                <li><a href="">COPA DE ORO</a></li>
+                <li><a href="">RESULTADOS</a></li>
+            </ul>
+           </div>
+        </nav>
+        
+    </header>
+   
+    <main>
+        <form action="/archivo" method="post">
+            <!--conjunto de campos (agrupa campos quie voy a recolectar)-->
+            <fieldset>
+                <legend>Datos Personales</legend><!--titulo-->
+
+                <div>
+                    <label for="nombre">Nombre</label> <!--etiqueta para-->
+                    <input type="text" name="nombre" id="nombre" required>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" required>
+                </div>
+                <div>
+                    <label for="dni">DNI</label>
+                    <input type="number" name="dni" id="dni">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Interes Personal</legend>
+                <div>
+                    <label for="deporte">Natacion</label>
+                    <input type="radio" name="deporte" id="natacion" value="natacion">
+                    <label for="deporte">Futbol</label>
+                    <input type="radio" name="deporte" id="futbol" value="futbol">
+                    <label for="deporte">Basquet</label>
+                    <input type="radio" name="deporte" id="basquet" value="basquet">
+                </div>
+                <div>
+                    <label for="equipos">Equipos</label>
+                    <select name="equipos" id="equipos">
+                        <option value="0">Seleccionar Equipo</option>
+                        <option value="river">River</option>
+                        <option value="san_lorenzo">San Lorenzo</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Escribe sobre ti</legend>
+                <label for="texto">Descripcion</label>
+                <textarea name="texto" id="texto" cols="30" rows="5"></textarea>
+            </fieldset>
+
+            <div>
+                <input type="submit" value="Enviar">
+
+
+            </div>
+
+        </form>
+        <button>Activar Modo Oscuro</button>
+    </main>
+</body>
+</html>
