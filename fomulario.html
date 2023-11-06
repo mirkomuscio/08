@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,70 +8,109 @@
     <title>Formulario</title>
     <link rel="stylesheet" href="formulario.css">
 </head>
+
 <body>
     <header>
-        <div><img src="assets/img/Peugeot_Logo.svg.png"  alt="" height="120px"></div>
         
-        <nav>
-           <div class="navegacion">
-            <ul>
-                <li><a href="">INICIO</a></li>
-                <li><a href="">PILOTOS</a></li>
-                <li><a href="">COPA DE ORO</a></li>
-                <li><a href="">RESULTADOS</a></li>
-            </ul>
-           </div>
-           <div>
-            <ul>
-                <li><a href="">INICIO</a></li>
-                <li><a href="">PILOTOS</a></li>
-                <li><a href="">COPA DE ORO</a></li>
-                <li><a href="">RESULTADOS</a></li>
-            </ul>
-           </div>
-        </nav>
+
+            <div class="nav">
+                <div><img src="assets/img/Peugeot_Logo.svg.png" alt="" height="65px"></div>
+                <h1>E-STORE</h1>
+                <nav>
+                   <ul>
+                    <li><a href="">GAMAS</a></li>
+                    <li><a href="">POSTVENTAS</a></li>
+  
+                   </ul>
+                </nav>
+            </div>
+             <div>
+                <ul>
+                    <li><a href="">BUSCA TU AUTO</a></li>
+                    <li><a href="">AYUDA</a></li>
+                   
+                </ul>
+            </div>
+            </div>
         
+
     </header>
-   
+
     <main>
         <form action="/archivo" method="post">
             <!--conjunto de campos (agrupa campos quie voy a recolectar)-->
             <fieldset>
-                <legend>Datos Personales</legend><!--titulo-->
+
 
                 <div>
                     <label for="nombre">Nombre</label> <!--etiqueta para-->
                     <input type="text" name="nombre" id="nombre" required>
+                </div>
+                <div>
+                    <label for="email">Enter your globex.com email:</label>
+                    <input type="email" id="email" pattern=".+@globex\.com" size="30" required />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div>
                     <label for="apellido">Apellido</label>
                     <input type="text" name="apellido" id="apellido" required>
                 </div>
                 <div>
+                    <label for="phone">Enter your phone number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                </div>
+            </fieldset>
+            <fieldset>
+                <label for="domicilio">Domicilio</label>
+                <input type="text" name="domicilio" id="domicilio" >
+            </fieldset>
+            <fieldset>
+                <div>
                     <label for="dni">DNI</label>
-                    <input type="number" name="dni" id="dni">
+                    <input type="number" name="dni" id="dni" required>
+                    <label for="gama">Gama</label>
+                    <select name="gama" id="gama">
+                        <option value="0">Gama</option>
+                        <option value="208">208</option>
+                        <option value="3008">3008</option>
+                        <option value="5008">5008</option>
+                        <option value="nuevo_3008">Nuevo 3008</option>
+                        <option value="partner">Partner</option>
+                        <option value="VUL">VUL</option>
+                    </select>                                
+                </div>
+            
+              
+            </fieldset>
+            <fieldset>
+                <div>
+                    
+                    <select name="consulta" id="consulta">
+                        <option value="0">Tipo Consulta</option>
+                        <option value="compra_contado">Compra Contado</option>
+                        <option value="usados">Usado</option>
+                        <option value="financiacion">Financiacion</option>
+                        <option value="financiacion+usado">Financiacion+Usado</option>
+                        <option value="plan_de_ahorro">Plan de Ahorro</option>
+                    </select>  
+                    <select name="version" id="version">
+                        <option value="0">Version</option>
+                        <option value="new_like">Compra Contado</option>
+                        <option value="active_pk">Usado</option>
+                        <option value="active_pk_at">Financiacion</option>
+                        <option value="allure_pk">Financiacion+Usado</option>
+                        <option value="allure_pk_at">Plan de Ahorro</option>
+                        <option value="feline_at">Plan de Ahorro</option>
+                        <option value="style_pk">Plan de Ahorro</option>
+                        <option value="roadtrip">Plan de Ahorro</option>
+                        <option value="roadtrip_at">Plan de Ahorro</option>
+                    </select>    
                 </div>
             </fieldset>
             <fieldset>
-                <legend>Interes Personal</legend>
-                <div>
-                    <label for="deporte">Natacion</label>
-                    <input type="radio" name="deporte" id="natacion" value="natacion">
-                    <label for="deporte">Futbol</label>
-                    <input type="radio" name="deporte" id="futbol" value="futbol">
-                    <label for="deporte">Basquet</label>
-                    <input type="radio" name="deporte" id="basquet" value="basquet">
-                </div>
-                <div>
-                    <label for="equipos">Equipos</label>
-                    <select name="equipos" id="equipos">
-                        <option value="0">Seleccionar Equipo</option>
-                        <option value="river">River</option>
-                        <option value="san_lorenzo">San Lorenzo</option>
-                    </select>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Escribe sobre ti</legend>
-                <label for="texto">Descripcion</label>
+               
+                <label for="texto">Comentario</label>
                 <textarea name="texto" id="texto" cols="30" rows="5"></textarea>
             </fieldset>
 
@@ -81,7 +121,8 @@
             </div>
 
         </form>
-        <button>Activar Modo Oscuro</button>
+      
     </main>
 </body>
+
 </html>

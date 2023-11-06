@@ -7,9 +7,10 @@ header{
     background-color: black;
     justify-content: left;
     padding: 5px;
+    justify-content: space-between;
 }
 nav{
-    justify-content: space-around;
+    justify-content: space-between;
     display: flex;
     margin-right: 85px;
 
@@ -25,4 +26,8 @@ div li {
     display: inline;
     text-align: center;
     margin-right: 100px;
+}
+.nav{
+    display: flex;
+    align-items: center;
 }
