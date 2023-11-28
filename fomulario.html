@@ -24,7 +24,6 @@
                 <ul class="izq-sec">
                     <li><a href="">GAMAS</a></li>
                     <li><a href="">POSTVENTAS</a></li>
-
                 </ul>
             </nav>
         </div>
@@ -41,85 +40,94 @@
     </header>
 
     <main>
+        <div class="contactar">
+            <h2>CONTACTAR ASESOR</h2>
+            <P>¿Te podemos ayudar? Envianos tu consulta:</P>
+        </div>
+
         <form action="/archivo" method="post">
             <!--conjunto de campos (agrupa campos quie voy a recolectar)-->
-            <fieldset class="nom-email">
-                <div>
-                    <label for="nombre">Nombre</label> <!--etiqueta para-->
-                    <input type="text" name="nombre" id="nombre" required>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" pattern=".+@globex\.com" size="30" required />
-                </div>
-            </fieldset>
-            <fieldset class="apell-num">
-                <div>
-                    <label for="apellido">Apellido</label>
-                    <input type="text" name="apellido" id="apellido" required>
-                </div>
-                <div>
-                    <label for="telefono">Telefono</label>
-                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
-                </div>
-            </fieldset>
+          <div class="contenido">
+            <div class="sec-1">
+                <fieldset >
+                    <div class="casillero" >
+                 
+                        <input type="text" name="nombre" placeholder="Nombre" id="nombre" size="50" required>
+                    </div>
+                    <div class="casillero" >
+              
+                        <input type="email" id="email" pattern=".+@globex\.com"  placeholder="Email" size="50" required />
+                    </div>
+                </fieldset>
+                <fieldset class="apell-num">
+                    <div class="casillero" >
+          
+                        <input type="text" name="apellido"  placeholder="Apellido" id="apellido" size="50" required>
+                    </div>
+                    <div class="casillero" >
+         
+                        <input type="tel" id="telefono"  placeholder="Telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="50" required />
+                    </div>
+                </fieldset>
 
-            <fieldset class="domicilio ">
-                <label for="domicilio">Domicilio</label>
-                <input type="text" name="domicilio" id="domicilio">
-            </fieldset>
+                <fieldset class="casillero" >
 
-            <fieldset class="dni-gama">
-                <div>
-                    <label for="dni">DNI</label>
-                    <input type="number" name="dni" id="dni" required>
-                    <label for="gama">Gama</label>
-                    <select name="gama" id="gama">
-                        <option value="0">Gama</option>
-                        <option value="208">208</option>
-                        <option value="3008">3008</option>
-                        <option value="5008">5008</option>
-                        <option value="nuevo_3008">Nuevo 3008</option>
-                        <option value="partner">Partner</option>
-                        <option value="VUL">VUL</option>
-                    </select>
-                </div>
+                    <input type="text" name="domicilio"  placeholder="Domicilio" id="domicilio" size="60">
+                </fieldset>
+
+                <fieldset class="dni-gama">
+                    <div class="casillero" >
+
+                        <input type="number"  placeholder="DNI" name="dni" id="dni" size="50" required>
+            
+                        <select name="gama"  placeholder="Gama" style="margin-left: 30px;" id="gama" >
+                            <option value="0">Gama</option>
+                            <option value="208">208</option>
+                            <option value="3008">3008</option>
+                            <option value="5008">5008</option>
+                            <option value="nuevo_3008">Nuevo 3008</option>
+                            <option value="partner">Partner</option>
+                            <option value="VUL">VUL</option>
+                        </select>
+                    </div>
 
 
-            </fieldset>
-            <fieldset class="consul-vers">
-                <div>
+                </fieldset>
+                <fieldset class="consul-vers">
+                    <div class="casillero" >
 
-                    <select name="consulta" id="consulta">
-                        <option value="0">Tipo Consulta</option>
-                        <option value="compra_contado">Compra Contado</option>
-                        <option value="usados">Usado</option>
-                        <option value="financiacion">Financiacion</option>
-                        <option value="financiacion+usado">Financiacion+Usado</option>
-                        <option value="plan_de_ahorro">Plan de Ahorro</option>
-                    </select>
-                    <select name="version" id="version">
-                        <option value="0">Version</option>
-                        <option value="new_like">Compra Contado</option>
-                        <option value="active_pk">Usado</option>
-                        <option value="active_pk_at">Financiacion</option>
-                        <option value="allure_pk">Financiacion+Usado</option>
-                        <option value="allure_pk_at">Plan de Ahorro</option>
-                        <option value="feline_at">Plan de Ahorro</option>
-                        <option value="style_pk">Plan de Ahorro</option>
-                        <option value="roadtrip">Plan de Ahorro</option>
-                        <option value="roadtrip_at">Plan de Ahorro</option>
-                    </select>
-                </div>
-            </fieldset>
-            <fieldset class="comentarios">
+                        <select name="consulta" id="consulta" >
+                            <option value="0">Tipo Consulta</option>
+                            <option value="compra_contado">Compra Contado</option>
+                            <option value="usados">Usado</option>
+                            <option value="financiacion">Financiacion</option>
+                            <option value="financiacion+usado">Financiacion+Usado</option>
+                            <option value="plan_de_ahorro">Plan de Ahorro</option>
+                        </select>
+                        <select name="version" id="version" style="margin-left: 30px;" >
+                            <option value="0">Version</option>
+                            <option value="new_like">New Like</option>
+                            <option value="active_pk">Active PK</option>
+                            <option value="active_pk_at">Active PK AT</option>
+                            <option value="allure_pk">Allure PK</option>
+                            <option value="allure_pk_at">Allure PK AT</option>
+                            <option value="feline_at">Feline AT</option>
+                            <option value="style_pk">Style PK</option>
+                            <option value="roadtrip">Roadtrip</option>
+                            <option value="roadtrip_at">Roadtrip AT</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="sec-2">
+                <fieldset >
+                    <textarea name="texto"  placeholder="Comentario" id="texto" cols="30" style="width: 100%;" rows="5"></textarea>
+                </fieldset>
+            </div>
+          </div>
 
-                <label for="texto">Comentario</label>
-                <textarea name="texto" id="texto" cols="30" rows="5"></textarea>
-            </fieldset>
-
-            <div>
-                <input type="submit" value="Enviar">
+            <div class="bottom">
+                <input type="submit" value="ENVIAR CONSULTA">
 
 
             </div>
@@ -130,9 +138,11 @@
     <footer>
         <div>
             <ul class="redes">
-                <li><a href="https://www.facebook.com/PeugeotArg/"><img src="assets/img/facebook (3).png" alt=""></a></li>
+                <li><a href="https://www.facebook.com/PeugeotArg/"><img src="assets/img/facebook (3).png" alt=""></a>
+                </li>
                 <li><a href="https://twitter.com/peugeotarg"><img src="assets/img/twitter-alt.png" alt=""></a></li>
-                <li><a href="https://www.instagram.com/peugeotarg/"><img src="assets/img/instagram (3).png" alt=""></a></li>
+                <li><a href="https://www.instagram.com/peugeotarg/"><img src="assets/img/instagram (3).png" alt=""></a>
+                </li>
                 <li>
                     <h2>0800-777-7384</h2>
                 </li>
